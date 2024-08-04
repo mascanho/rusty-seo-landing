@@ -97,8 +97,9 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Build beautiful
-                <Br /> software faster
+                Democratize
+                <Br />
+                your SEO efforts
               </FallInPlace>
             }
             description={
@@ -135,7 +136,7 @@ const HeroSection: React.FC = () => {
                     />
                   }
                 >
-                  View demo
+                  view features
                 </ButtonLink>
               </ButtonGroup>
             </FallInPlace>
@@ -329,7 +330,7 @@ const FeaturesSection = () => {
           as="p"
         >
           Not your standard
-          <Br /> dashboard template.
+          <Br /> website crawler
         </Heading>
       }
       description={
