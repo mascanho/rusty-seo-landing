@@ -97,16 +97,16 @@ const HeroSection: React.FC = () => {
             px="0"
             title={
               <FallInPlace>
-                Democratize
+                Unrust your
                 <Br />
-                your SEO efforts
+                Marketing & SEO
               </FallInPlace>
             }
             description={
               <FallInPlace delay={0.4} fontWeight="medium">
-                Saas UI is a <Em>React component library</Em>
-                <Br /> that doesn&apos;t get in your way and helps you <Br />{" "}
-                build intuitive SaaS products with speed.
+                RustySEO is a <Em>powerful SEO analysis tool</Em>
+                <Br /> designed to streamline your website's optimization and{" "}
+                <Br /> improve your search engine rankings with ease.
               </FallInPlace>
             }
           >
@@ -175,35 +175,44 @@ const HeroSection: React.FC = () => {
         pt="20"
         features={[
           {
-            title: "Accessible",
+            title: "Task Management",
             icon: FiSmile,
-            description: "All components strictly follow WAI-ARIA standards.",
+            description:
+              "Create, assign, and track SEO tasks efficiently to streamline your optimization efforts.",
             iconPosition: "left",
             delay: 0.6,
           },
           {
-            title: "Themable",
+            title: "Data Storage",
             icon: FiSliders,
             description:
-              "Fully customize all components to your brand with theme support and style props.",
+              "Store and manage crawl data, performance metrics, and SEO insights in one centralized location.",
             iconPosition: "left",
             delay: 0.8,
           },
           {
-            title: "Composable",
+            title: "Performance Insights",
             icon: FiGrid,
             description:
-              "Compose components to fit your needs and mix them together to create new ones.",
+              "Analyze your site's performance with detailed reports and actionable insights to boost your SEO strategy.",
             iconPosition: "left",
             delay: 1,
           },
           {
-            title: "Productive",
+            title: "On-Page SEO",
             icon: FiThumbsUp,
             description:
-              "Designed to reduce boilerplate and fully typed, build your product at speed.",
+              "Optimize your website’s on-page SEO with tools that evaluate and enhance your content and meta tags.",
             iconPosition: "left",
             delay: 1.1,
+          },
+          {
+            title: "Marketing Integration",
+            icon: FiSmile,
+            description:
+              "Integrate your SEO efforts with overall marketing strategies for a unified approach to growth and visibility.",
+            iconPosition: "left",
+            delay: 1.3,
           },
         ]}
         reveal={FallInPlace}
