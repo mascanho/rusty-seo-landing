@@ -1,7 +1,8 @@
+'use client'
 import * as React from "react";
 import { HStack } from "@chakra-ui/react";
 
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 
 import siteConfig from "data/config";
 
@@ -17,7 +18,7 @@ import ThemeToggle from "./theme-toggle";
 
 const Navigation: React.FC = () => {
   const mobileNav = useDisclosure();
-  const router = useRouter();
+  const pathname = usePathname();
   const activeId = useScrollSpy(
     siteConfig.header.links
       .filter(({ id }) => id)
@@ -44,7 +45,7 @@ const Navigation: React.FC = () => {
             isActive={
               !!(
                 (id && activeId === id) ||
-                (href && !!router.asPath.match(new RegExp(href)))
+                (href && !!pathname?.match(new RegExp(href)))
               )
             }
             {...props}

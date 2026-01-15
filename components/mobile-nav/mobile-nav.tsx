@@ -1,3 +1,4 @@
+'use client'
 import {
   Box,
   BoxProps,
@@ -21,7 +22,7 @@ import { AnimatePresence, motion, useElementScroll } from 'framer-motion'
 import useRouteChanged from 'hooks/use-route-changed'
 // import { getRoutes } from '@/layouts/mdx'
 import NextLink from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import * as React from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { RemoveScroll } from 'react-remove-scroll'
@@ -37,11 +38,11 @@ interface NavLinkProps extends LinkProps {
 }
 
 function NavLink({ href, children, isActive, ...rest }: NavLinkProps) {
-  const { pathname } = useRouter()
+  const pathname = usePathname()
   const bgActiveHoverColor = useColorModeValue('gray.100', 'whiteAlpha.100')
 
   const [, group] = href?.split('/') || []
-  isActive = isActive ?? pathname.includes(group)
+  isActive = isActive ?? pathname?.includes(group)
 
   return (
     <Link
@@ -72,9 +73,9 @@ interface MobileNavContentProps {
 }
 
 export function MobileNavContent(props: MobileNavContentProps) {
-  const { isOpen, onClose = () => {} } = props
+  const { isOpen, onClose = () => { } } = props
   const closeBtnRef = React.useRef<HTMLButtonElement>(null)
-  const { pathname } = useRouter()
+  const pathname = usePathname()
   const bgColor = useColorModeValue('whiteAlpha.900', 'blackAlpha.900')
 
   useRouteChanged(onClose)
